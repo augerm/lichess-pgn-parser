@@ -19,7 +19,7 @@ export class PGN {
     constructor(pgnStr: string) {
       this.pgn = pgnStr;
       this.headers = this.parseHeaders();
-      this.moveTimings = this.parseMoveTimings();
+      this.moveTimings = this.parseMoveTimings() || [];
       this.timeControl = {
         white: this.moveTimings[0],
         black: this.moveTimings[1],
@@ -82,8 +82,3 @@ export class PGN {
       console.log(this.moves.length);
     }
 }
-
-(async () => {
-    const pgn = new PGN('/Users/michaelauger/Development/pgn-parser/PGN/src/test.pgn');
-    pgn.print();
-})();
