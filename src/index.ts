@@ -53,8 +53,6 @@ export class PGN {
         if(this.isMove(whiteMove)) whiteMoves.push(this.cleanMove(whiteMove));
         if(this.isMove(blackMove)) blackMoves.push(this.cleanMove(blackMove));
       }
-      console.log(whiteMoves);
-      console.log(blackMoves);
       const allMoves = [];
       for(let i = 0; i < whiteMoves.length; i++) {
         const tempMoves = [whiteMoves[i]];
