@@ -14,18 +14,12 @@
     "start": "tsdx watch --onSuccess \"node dist/index.js\"",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint",
     "prepare": "tsdx build",
     "patch": "npm run build && npm version patch && npm publish",
     "minor": "npm run build && npm version minor && npm publish",
     "major": "npm run build && npm version major && npm publish"
   },
   "peerDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
   "prettier": {
     "printWidth": 80,
     "semi": true,
